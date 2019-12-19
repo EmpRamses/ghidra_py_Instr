@@ -25,10 +25,10 @@ def serve_detect(port=4768):
     sys.exit()
 
 # Choose any argument you need & Delete other arguments
-def asm_exporter(proj_pth, proj_n, bin_pth, bin_n):
+def asm_exporter(proj_pth, proj_name, bin_pth, bin_name):
     code = list()
     # Modify the command as arguments you chosen above
-    proc = subprocess.Popen(["nohup", "./ghidra_bridge.sh", "-n", bin_n, "-p", proj_pth, "-b", bin_pth, "-m", proj_n], preexec_fn=os.setsid)
+    proc = subprocess.Popen(["nohup", "./ghidra_bridge.sh", "-n", bin_name, "-p", proj_pth, "-b", bin_pth, "-m", proj_name], preexec_fn=os.setsid)
     serve_detect()
     with ghidra_bridge.GhidraBridge(namespace=globals()):
         Listing = ghidra.program.model.listing.Listing
