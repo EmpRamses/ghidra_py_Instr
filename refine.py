@@ -10,31 +10,29 @@ code, proc = asm_exporter(
 
 try:
     asm_code = dict()
-    label = "__MOST__HEAD__"
-    asm_code[label] = dict()
     addr_label = dict()
     for line in code:
-        inst = str(line)
-        addr = str(line.getAddress())
+        inst = line.getInst()
+        addr = line.getAddress()
         if line.getLabel():
             print(line.getLabel())
-            label = str(line.getLabel())
-            asm_code[label] = dict()
+            label = line.getLabel()
             addr_label[addr] = label
         print(line.getAddress(), '\t', inst)
-        asm_code[label][addr] = inst
+        asm_code[addr] = inst
 
     print("\nRename Destination of Jump \& Call\n")
 
-    for label in asm_code.keys():
-        for addr in asm_code[label].keys():
-            inst = asm_code[label][addr]
-            if inst[-8:] in addr_label:
-                inst = inst[:-10] + addr_label[inst[-8:]]
-                print(inst)
-                asm_code[label][addr] = inst
+    for addr in asm_code.keys():
+        inst = asm_code[addr]
+        if inst[-8:] in addr_label:
+            inst = inst.split(" ")[0] + " " + addr_label[inst[-8:]]
+            print(inst)
+            asm_code[addr] = inst
     with open("/Users/empramsesii/Code/GhidraProjects/ch14/exercise03_s.json", "w") as f:
-        json.dump(asm_code, f)
+        addr_label = dict(zip(addr_label.values(), addr_label.keys()))
+        code_dict = {**asm_code, **addr_label}
+        json.dump(code_dict, f)
 
 # Terminate the subprocess with proc
 finally:
