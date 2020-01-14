@@ -51,11 +51,9 @@ def asm_exporter(proj_pth, proj_name, bin_pth, bin_name):
                     str(line),
                     str(line.getMaxAddress())
                     ))
-    except Exception as e:
-        traceback.print_exc()
+    finally:
         kill_proc(proc)
-        sys.exit()
-    return code, proc        # code is a list of Inst, proc is the sub-process
+    return code       # code is a list of Inst
 
 # Use to terminate all processes created by subprocess
 def kill_proc(proc):
