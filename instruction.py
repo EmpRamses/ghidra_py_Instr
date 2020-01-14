@@ -7,7 +7,7 @@ class Inst:
         self.inst = inst
         self.label = label
     def getLabel(self):
-        return self.rabel
+        return self.label
     def getAddress(self):
         return self.addr
     def getEndAddress(self):
