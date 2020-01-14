@@ -6,22 +6,22 @@ class Inst:
         self.endaddr = endaddr
         self.inst = inst
         self.label = label
-    def getLabel():
+    def getLabel(self):
         return self.rabel
-    def getAddress():
+    def getAddress(self):
         return self.addr
-    def getEndAddress():
+    def getEndAddress(self):
         return self.endaddr
-    def getInst():
+    def getInst(self):
         return self.inst
-    def getOp():
+    def getOp(self):
         return self.inst.split(" ", 1)[0]
-    def getOpObject():
+    def getOpObject(self):
         objs = self.inst.split(" ", 1)[1]
         if "," in objs:
             return objs.split(",")[0]
         else:
             return objs
-    def getArgs():
+    def getArgs(self):
         objs = self.inst.split(" ", 1)[1]
         return objs.split(",")
