@@ -1,0 +1,147 @@
+./ghidra_bridge.sh:33: no such file or directory: /home/lcf/Code/ghidra_9.2_DEV/support/analyzeHeadless
+$GHIDRA_PATH/support/analyzeHeadless $PROJECT_PATH $PROJECT_NAME -import       0.00s user 0.00s system 84% cpu 0.001 total
+Java HotSpot(TM) 64-Bit Server VM warning: Archived non-system classes are disabled because the java.system.class.loader property is specified (value = "ghidra.GhidraClassLoader"). To use archived non-system classes, this property must not be set
+java version "12.0.2" 2019-07-16
+Java(TM) SE Runtime Environment (build 12.0.2+10)
+Java HotSpot(TM) 64-Bit Server VM (build 12.0.2+10, mixed mode, sharing)
+INFO  Using log config file: jar:file:/home/lcf/repos/ghidra_9.2_DEV/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/lcf/.ghidra/.ghidra_9.2_DEV/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/lcf/.ghidra/.ghidra_9.2_DEV/preferences (Preferences)  
+INFO  Class search complete (1912 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+Exception in thread "main" ghidra.util.exception.InvalidInputException: /home/lcf/Code/GhidraProjects/ch14/exercise03.elf is not a valid directory or file.
+	at ghidra.app.util.headless.AnalyzeHeadless.parseOptions(AnalyzeHeadless.java:212)
+	at ghidra.app.util.headless.AnalyzeHeadless.launch(AnalyzeHeadless.java:113)
+	at ghidra.GhidraLauncher.main(GhidraLauncher.java:82)
+$GHIDRA_PATH/support/analyzeHeadless $PROJECT_PATH $PROJECT_NAME -import       5.15s user 0.59s system 95% cpu 6.008 total
+Java HotSpot(TM) 64-Bit Server VM warning: Archived non-system classes are disabled because the java.system.class.loader property is specified (value = "ghidra.GhidraClassLoader"). To use archived non-system classes, this property must not be set
+java version "12.0.2" 2019-07-16
+Java(TM) SE Runtime Environment (build 12.0.2+10)
+Java HotSpot(TM) 64-Bit Server VM (build 12.0.2+10, mixed mode, sharing)
+INFO  Using log config file: jar:file:/home/lcf/repos/ghidra_9.2_DEV/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/lcf/.ghidra/.ghidra_9.2_DEV/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/lcf/.ghidra/.ghidra_9.2_DEV/preferences (Preferences)  
+INFO  Class search complete (987 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+Exception in thread "main" ghidra.util.exception.InvalidInputException: /home/lcf/Code/GhidraProjects/Struct/exercise03.elf is not a valid directory or file.
+	at ghidra.app.util.headless.AnalyzeHeadless.parseOptions(AnalyzeHeadless.java:212)
+	at ghidra.app.util.headless.AnalyzeHeadless.launch(AnalyzeHeadless.java:113)
+	at ghidra.GhidraLauncher.main(GhidraLauncher.java:82)
+$GHIDRA_PATH/support/analyzeHeadless $PROJECT_PATH $PROJECT_NAME -import       4.07s user 0.38s system 207% cpu 2.140 total
+Java HotSpot(TM) 64-Bit Server VM warning: Archived non-system classes are disabled because the java.system.class.loader property is specified (value = "ghidra.GhidraClassLoader"). To use archived non-system classes, this property must not be set
+java version "12.0.2" 2019-07-16
+Java(TM) SE Runtime Environment (build 12.0.2+10)
+Java HotSpot(TM) 64-Bit Server VM (build 12.0.2+10, mixed mode, sharing)
+INFO  Using log config file: jar:file:/home/lcf/repos/ghidra_9.2_DEV/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/lcf/.ghidra/.ghidra_9.2_DEV/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/lcf/.ghidra/.ghidra_9.2_DEV/preferences (Preferences)  
+INFO  Class search complete (971 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  HEADLESS Script Paths:
+    /home/lcf/repos/ghidra_bridge
+    /home/lcf/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Features/Base/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Features/Python/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Processors/8051/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Processors/DATA/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Processors/PIC/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating project: /home/lcf/repos/GhidraProjects/tmp/tmp (HeadlessAnalyzer)  
+ERROR Abort due to Headless analyzer error: Directory not found: /home/lcf/repos/GhidraProjects/tmp (HeadlessAnalyzer) java.io.FileNotFoundException: Directory not found: /home/lcf/repos/GhidraProjects/tmp
+	at ghidra.framework.project.DefaultProjectManager.createProject(DefaultProjectManager.java:99)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processLocal(HeadlessAnalyzer.java:425)
+	at ghidra.app.util.headless.AnalyzeHeadless.launch(AnalyzeHeadless.java:121)
+	at ghidra.GhidraLauncher.main(GhidraLauncher.java:82)
+ 
+$GHIDRA_PATH/support/analyzeHeadless $PROJECT_PATH $PROJECT_NAME -import       4.36s user 0.43s system 199% cpu 2.396 total
+Java HotSpot(TM) 64-Bit Server VM warning: Archived non-system classes are disabled because the java.system.class.loader property is specified (value = "ghidra.GhidraClassLoader"). To use archived non-system classes, this property must not be set
+java version "12.0.2" 2019-07-16
+Java(TM) SE Runtime Environment (build 12.0.2+10)
+Java HotSpot(TM) 64-Bit Server VM (build 12.0.2+10, mixed mode, sharing)
+INFO  Using log config file: jar:file:/home/lcf/repos/ghidra_9.2_DEV/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/lcf/.ghidra/.ghidra_9.2_DEV/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/lcf/.ghidra/.ghidra_9.2_DEV/preferences (Preferences)  
+INFO  Class search complete (970 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  HEADLESS Script Paths:
+    /home/lcf/repos/ghidra_bridge
+    /home/lcf/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Features/Base/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Features/Python/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Processors/8051/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Processors/DATA/ghidra_scripts
+    /home/lcf/repos/ghidra_9.2_DEV/Ghidra/Processors/PIC/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating project: /home/lcf/repos/GhidraProjects/tmp/tmp (HeadlessAnalyzer)  
+INFO  Creating project: /home/lcf/repos/GhidraProjects/tmp/tmp (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /home/lcf/repos/GhidraProjects/tmp/tmp (HeadlessAnalyzer)  
+INFO  IMPORTING: /home/lcf/repos/GhidraProjects/Struct/exercise03.elf (HeadlessAnalyzer)  
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/home/lcf/repos/ghidra_9.2_DEV/Ghidra/Framework/Generic/lib/cglib-nodep-2.2.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+INFO  REPORT: Import succeeded with language "x86:LE:64:default" and cspec "gcc" for file: /home/lcf/repos/GhidraProjects/Struct/exercise03.elf (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: /home/lcf/repos/GhidraProjects/Struct/exercise03.elf (HeadlessAnalyzer)  
+INFO  Packed database cache: /tmp/lcf-Ghidra/packed-db-cache (PackedDatabaseCache)  
+INFO  -----------------------------------------------------
+    ASCII Strings                              0.415 secs
+    Apply Data Archives                        0.598 secs
+    Call Convention Identification             0.054 secs
+    Call-Fixup Installer                       0.004 secs
+    Create Address Tables                      0.010 secs
+    Create Function                            0.007 secs
+    DWARF                                      0.013 secs
+    Data Reference                             0.007 secs
+    Decompiler Switch Analysis                 0.316 secs
+    Demangler                                  0.026 secs
+    Disassemble Entry Points                   0.102 secs
+    ELF Scalar Operand References              0.016 secs
+    Embedded Media                             0.010 secs
+    External Entry References                  0.000 secs
+    Function Start Search                      0.029 secs
+    Function Start Search After Code           0.003 secs
+    Function Start Search After Data           0.002 secs
+    GCC Exception Handlers                     0.056 secs
+    Non-Returning Functions - Discovered       0.014 secs
+    Non-Returning Functions - Known            0.001 secs
+    Reference                                  0.014 secs
+    Shared Return Calls                        0.005 secs
+    Stack                                      0.083 secs
+    Subroutine References                      0.005 secs
+    x86 Constant Reference Analyzer            0.177 secs
+-----------------------------------------------------
+     Total Time   1 secs
+-----------------------------------------------------
+ (AutoAnalysisManager)  
+INFO  REPORT: Analysis succeeded for file: /home/lcf/repos/GhidraProjects/Struct/exercise03.elf (HeadlessAnalyzer)  
+INFO  SCRIPT: /home/lcf/repos/ghidra_bridge/ghidra_bridge_server.py (HeadlessAnalyzer)  
+INFO:ghidra_bridge.bridge:serving!
+WARNING:ghidra_bridge.bridge:Handling connection from ('127.0.0.1', 44582)
+WARNING:ghidra_bridge.bridge:Handling connection from ('127.0.0.1', 44584)
+WARNING:ghidra_bridge.bridge:Closing connection from ('127.0.0.1', 44582)

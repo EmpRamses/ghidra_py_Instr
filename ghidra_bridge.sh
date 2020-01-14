@@ -6,11 +6,11 @@
 # ./ghidra_bridge.sh -p path_to_project -b path_to_binary_directory -m project_name -n binary_name
 
 # Default paths & names
-GHIDRA_PATH=~/Code/ghidra_9.2_DEV
-SCRIPT_PATH=~/Code/ghidra_bridge        # The script path is the root directory of ghidra_bridge
-PROJECT_PATH=~/Code/GhidraProjects/tmp
+GHIDRA_PATH=~/repos/ghidra_9.2_DEV
+SCRIPT_PATH=~/repos/ghidra_bridge        # The script path is the root directory of ghidra_bridge
+PROJECT_PATH=~/repos/GhidraProjects/tmp
 PROJECT_NAME=tmp
-BINARY_PATH=~/Code/GhidraProjects
+BINARY_PATH=~/repos/GhidraProjects
 
 while getopts 'p:b:m:n:' arg;
 do

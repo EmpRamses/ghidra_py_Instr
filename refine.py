@@ -1,9 +1,9 @@
 import json
 from asm_exporter import asm_exporter, kill_proc
 code, proc = asm_exporter(
-        proj_pth="~/Code/GhidraProjects/tmp",
+        proj_pth="~/repos/GhidraProjects/tmp",
         proj_name="tmp",
-        bin_pth="~/Code/GhidraProjects/ch14",
+        bin_pth="~/repos/GhidraProjects/Struct",
         bin_name="exercise03.elf")
 # code is a list of ghidra.program.database.code.InstructionDB, proc is the sub-process
 # Use code to do any further analysis
@@ -29,7 +29,7 @@ try:
             inst = inst.split(" ")[0] + " " + addr_label[inst[-8:]]
             print(inst)
             asm_code[addr] = inst
-    with open("/Users/empramsesii/Code/GhidraProjects/ch14/exercise03_s.json", "w") as f:
+    with open("~/repos/GhidraProjects/Struct/exercise03_s.json", "w") as f:
         addr_label = dict(zip(addr_label.values(), addr_label.keys()))
         code_dict = {**asm_code, **addr_label}
         json.dump(code_dict, f)
