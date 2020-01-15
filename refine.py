@@ -8,27 +8,24 @@ code = asm_exporter(
 # code is a list of ghidra.program.database.code.InstructionDB, proc is the sub-process
 # Use code to do any further analysis
 
-asm_code = dict()
+'''
 addr_label = dict()
-for line in code:
-    inst = line.getInst()
-    addr = line.getAddress()
-    if line.getLabel():
-        print(line.getLabel())
-        label = line.getLabel()
+for addr in code.keys():
+    if code[addr].getLabel():
+        print(code[addr].getLabel())
+        label = code[addr].getLabel()
         addr_label[addr] = label
-    print(line.getAddress(), '\t', inst)
-    asm_code[addr] = inst
+    print(addr, '\t', code[addr].getInst())
 
 print("\nRename Destination of Jump \& Call\n")
 
-for addr in asm_code.keys():
-    inst = asm_code[addr]
+for addr in code.keys():
+    inst = code[addr].getInst()
     if inst[-8:] in addr_label:
         inst = inst.split(" ")[0] + " " + addr_label[inst[-8:]]
         print(inst)
-        asm_code[addr] = inst
-with open("~/repos/GhidraProjects/Struct/exercise03_s.json", "w") as f:
-    addr_label = dict(zip(addr_label.values(), addr_label.keys()))
-    code_dict = {**asm_code, **addr_label}
-    json.dump(code_dict, f)
+        code.updateInst(addr, inst)
+'''
+
+path = "/home/lcf/repos/GhidraProjects/Struct/exercise03_s.pkl"
+code.save_to_file(path)
