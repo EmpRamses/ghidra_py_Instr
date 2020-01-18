@@ -29,6 +29,16 @@ def serve_detect(port=4768):
     print("Time Out")
     sys.exit()
 
+def bytesToHex(byte):
+    hexs = list()
+    for b in byte:
+        b = (bin(((1 << 8) - 1) & b)[2:]).zfill(8)
+        h = hex(int(b, 2))[2:]
+        if len(h) == 1:
+            h = "0" + h
+        hexs.append(h)
+    return hexs
+
 # Choose any argument you need & Delete other arguments
 def asm_exporter(proj_pth, proj_name, bin_pth, bin_name):
     code = Program(bin_name)
@@ -47,11 +57,17 @@ def asm_exporter(proj_pth, proj_name, bin_pth, bin_name):
                 label = None
                 if line.getLabel():
                     label = str(line.getLabel())
+                byte = None
+                inst = str(line)
+                if inst != "?? ??":
+                    byte = bytesToHex(line.getBytes())
+
                 code.addInst(Inst(
                     label,
                     str(line.getAddress()),
-                    str(line),
-                    str(line.getMaxAddress())
+                    inst,
+                    str(line.getMaxAddress()),
+                    byte
                     ))
     finally:
         kill_proc(proc)

@@ -3,11 +3,12 @@ import os
 import pickle
 
 class Inst:
-    def __init__(self, label, addr, inst, endaddr):
+    def __init__(self, label, addr, inst, endaddr, byte):
         self.addr = addr
         self.endaddr = endaddr
         self.inst = inst
         self.label = label
+        self.byte = byte
 
     def getLabel(self):
         return self.label
@@ -37,6 +38,12 @@ class Inst:
     def getArgs(self):
         objs = self.inst.split(" ", 1)[1]
         return objs.split(",")
+
+    def getSrc(self):
+        return self.getArgs()[1]
+
+    def getBytes(self):
+        return self.byte
 
 
 class Program:
