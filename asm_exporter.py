@@ -14,7 +14,6 @@ def bytesToHex(byte):
         hexs.append(h)
     return hexs
 
-
 cuIterator = Listing.getCodeUnits(currentProgram.getListing(), True)
 insts = list()
 code = Program(name="test")

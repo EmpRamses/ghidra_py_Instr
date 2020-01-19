@@ -1,7 +1,6 @@
 # Classes imitating ghidra types
 import os
 import pickle
-import traceback
 
 
 class Inst:
@@ -84,4 +83,3 @@ class Program:
                 self.insts = pickle.load(f, encoding="iso-8859-1")
         except OSError as ose:
             print("No Such File")
-            traceback.print_exc()
