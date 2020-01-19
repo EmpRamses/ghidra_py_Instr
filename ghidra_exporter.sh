@@ -3,11 +3,11 @@
 set -x
 
 # Default paths & names
-GHIDRA_PATH=~/Code/ghidra_9.2_DEV
+GHIDRA_PATH=~/repos/ghidra_9.2_DEV
 SCRIPT_PATH=$(cd "$(dirname "$0")";pwd)        # The script path is the root directory of ghidra_bridge
-PROJECT_PATH=~/Code/GhidraProjects/tmp
+PROJECT_PATH=~/repos/GhidraProjects/tmp
 PROJECT_NAME=tmp
-BINARY_PATH=~/Code/GhidraProjects
+BINARY_PATH=~/repos/GhidraProjects
 
 while getopts 'p:b:m:n:o:' arg;
 do
