@@ -1,7 +1,7 @@
 import os
 
 bin_name = "exercise03.elf"
-bin_pth = "/Users/empramsesii/Code/GhidraProjects/Struct"
+bin_pth = "/home/lcf/repos/GhidraProjects/Struct"
 
 
 def ghidra_asm_py(bin_name=bin_name, bin_pth=bin_pth, output_dir=bin_pth):
