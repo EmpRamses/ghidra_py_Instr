@@ -1,21 +1,15 @@
-from asm_exporter import asm_exporter, kill_proc
-code, proc = asm_exporter(
-        proj_pth="~/Code/GhidraProjects/tmp",
-        proj_name="tmp",
-        bin_pth="~/Code/GhidraProjects/ch14",
-        bin_name="exercise03.elf")
-# code is a list of ghidra.program.database.code.InstructionDB, proc is the sub-process
-# Use code to do any further analysis
+from ghidra_asm_exporter import ghidra_asm_py
+from ghidraType import Program
 
-try:
-    with open("/Users/empramsesii/Code/GhidraProjects/ch14/exercise03.s", "w") as f:
-        for line in code:
-            if line.getLabel():
-                print(line.getLabel())
-                f.write(str(line.getLabel()) + '\n')
-            print(line.getAddress(), '\t', line)
-            f.write(str(line.getAddress()) + '\t' + str(line) + '\n')
+output_pth = ghidra_asm_py(bin_name="exercise03.elf",
+                           bin_pth="/Users/empramsesii/Code/GhidraProjects/Struct",
+                           output_dir="/Users/empramsesii/Code/GhidraProjects/Struct")
 
-# Terminate the subprocess with proc
-finally:
-    kill_proc(proc)
+print(output_pth)
+prog = Program(name="test")
+prog.load_from_file(output_pth)
+
+for key in prog.keys():
+    if prog[key].getLabel():
+        print(prog[key].getLabel())
+    print(key, "\t", prog[key].getInst())

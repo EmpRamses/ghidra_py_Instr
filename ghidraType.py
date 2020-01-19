@@ -1,13 +1,16 @@
-# A class of instruction imitating InstructionDB from ghidra
+# Classes imitating ghidra types
 import os
 import pickle
+import traceback
+
 
 class Inst:
-    def __init__(self, label, addr, inst, endaddr):
+    def __init__(self, label, addr, inst, endaddr, byte):
         self.addr = addr
         self.endaddr = endaddr
         self.inst = inst
         self.label = label
+        self.byte = byte
 
     def getLabel(self):
         return self.label
@@ -37,6 +40,12 @@ class Inst:
     def getArgs(self):
         objs = self.inst.split(" ", 1)[1]
         return objs.split(",")
+
+    def getSrc(self):
+        return self.getArgs()[1]
+
+    def getBytes(self):
+        return self.byte
 
 
 class Program:
@@ -75,5 +84,4 @@ class Program:
                 self.insts = pickle.load(f, encoding="iso-8859-1")
         except OSError as ose:
             print("No Such File")
-
-
+            traceback.print_exc()
